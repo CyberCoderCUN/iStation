@@ -1,5 +1,3 @@
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
-
 interface CardProductProps {
   product: Product;
 }
@@ -18,27 +16,21 @@ const CardProduct = (props: CardProductProps) => {
   const { name, image, description, price, id } = product;
 
   return (
-    <Card
-      shadow="sm"
-      key={`product-${id}`}
-      isPressable
-      onPress={() => console.log("item pressed")}
-    >
-      <CardBody className="overflow-visible p-0">
-        <Image
-          shadow="sm"
-          radius="lg"
+    <article key={`product-${id}`} onClick={() => console.log("item pressed")}>
+      <div className="overflow-visible p-0">
+        <img
           width="100%"
           alt={name}
           className="w-full object-cover"
           src={image}
         />
-      </CardBody>
-      <CardFooter className="text-small justify-between">
+      </div>
+      <div className="text-small justify-between">
         <b>{name}</b>
+        <b>{description}</b>
         <p className="text-default-500">{price}</p>
-      </CardFooter>
-    </Card>
+      </div>
+    </article>
   );
 };
 

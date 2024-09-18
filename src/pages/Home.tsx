@@ -1,7 +1,6 @@
 import Header from "../components/Header/Header";
 import { productList } from "./products.utils";
 import CardProduct, { Product } from "../components/CardProduct/CardProduct";
-import { Listbox, ListboxItem } from "@nextui-org/react";
 
 const HomePage = () => {
   const iPhoneList: Product[] = productList.filter(
@@ -43,21 +42,17 @@ const HomePage = () => {
         </section>
         <div className="grid grid-cols-12">
           <div className="col-start-1 col-end-2">
-            <Listbox
-              items={categories}
-              aria-label="Dynamic Actions"
-              onAction={(key) => alert(key)}
-            >
-              {(item) => (
-                <ListboxItem
+            <ul>
+              {categories.map((item) => (
+                <li
                   key={item.key}
                   color={item.key === "delete" ? "danger" : "default"}
                   className={item.key === "delete" ? "text-danger" : ""}
                 >
                   {item.label}
-                </ListboxItem>
-              )}
-            </Listbox>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="col-start-3 col-end-12 pb-12">
             <section>

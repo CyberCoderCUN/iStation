@@ -1,0 +1,28 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerSection {
+}
+
+.navbarContainer {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+
+.itemText {
+  font-size: 1rem;
+  color: #404040;
+}
+
+.selectedItemText {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+}

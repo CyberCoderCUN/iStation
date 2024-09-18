@@ -1,5 +1,4 @@
-import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
-import { NavbarItem, Link, Button } from "@nextui-org/react";
+import styles from "./Header.module.css";
 import { useLocation } from "react-router-dom";
 
 const Header = () => {
@@ -11,46 +10,57 @@ const Header = () => {
   const isAccessories = pathname === "/accessories";
 
   return (
-    <Navbar maxWidth="xl">
-      <NavbarBrand>
-        <p className="font-bold text-inherit">iStation</p>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive={isHome}>
-          <Link color={!isHome ? "foreground" : undefined} href="/">
-            Inicio
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={isIphone}>
-          <Link color={!isIphone ? "foreground" : undefined} href="/iphone">
-            iPhone
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={isMac}>
-          <Link color={!isMac ? "foreground" : undefined} href="mac">
-            Mac
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={isAccessories}>
-          <Link
-            color={!isAccessories ? "foreground" : undefined}
-            href="/accessories"
-          >
-            Accesorios
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+    <header className={styles.headerContainer}>
+      <div className={styles.headerSection}>
+        <p className="">iStation</p>
+      </div>
+      <nav className={styles.headerSection}>
+        <div className={styles.navbarContainer}>
+          <div className={styles.NavbarItem}>
+            <a
+              className={isHome ? styles.selectedItemText : styles.itemText}
+              href="/"
+            >
+              Inicio
+            </a>
+          </div>
+          <div className={isIphone ? styles.selectedItemText : styles.itemText}>
+            <a
+              className={styles.itemText}
+              color={!isIphone ? "foreground" : undefined}
+              href="/iphone"
+            >
+              iPhone
+            </a>
+          </div>
+          <div>
+            <a className={isMac ? styles.selectedItemText : styles.itemText}>
+              Mac
+            </a>
+          </div>
+          <div>
+            <a
+              className={
+                isAccessories ? styles.selectedItemText : styles.itemText
+              }
+              href="/accessories"
+            >
+              Accesorios
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div className={styles.headerSection}>
+        <div className={styles.navbarContainer}>
+          <div className={styles.NavbarItem}>
+            <a href="#">Login</a>
+          </div>
+          <div className={styles.NavbarItem}>
+            <button color="primary">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 
