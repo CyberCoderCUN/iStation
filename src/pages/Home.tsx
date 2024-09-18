@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import { productList } from "./products.utils";
 import CardProduct, { Product } from "../components/CardProduct/CardProduct";
+import TopLabelPromo from "../components/TopLabelPromo/TopLabelPromo";
 
 const HomePage = () => {
   const iPhoneList: Product[] = productList.filter(
@@ -30,6 +31,7 @@ const HomePage = () => {
 
   return (
     <>
+      <TopLabelPromo />
       <Header />
       <div className="container mx-auto px-6">
         <section>

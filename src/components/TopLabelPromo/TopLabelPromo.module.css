@@ -1,0 +1,20 @@
+.topLabelPromo {
+  background-color: #242424;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.contentText {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contentTextCTA {
+  text-decoration: underline;
+  font-weight: 600;
+}
