@@ -37,7 +37,10 @@ const Header = () => {
               </a>
             </div>
             <div>
-              <a className={isMac ? styles.selectedItemText : styles.itemText}>
+              <a
+                className={isMac ? styles.selectedItemText : styles.itemText}
+                href="/mac"
+              >
                 Mac
               </a>
             </div>
