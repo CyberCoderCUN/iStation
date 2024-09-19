@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/Home";
+import HomePage from "./pages/home/Home";
 import AccessoriesPage from "./pages/Accessories";
 import MacPage from "./pages/MacPage";
 import IphonePage from "./pages/IphonePage";

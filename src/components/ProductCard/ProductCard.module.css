@@ -1,0 +1,38 @@
+.productCardContainer {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.productDescription {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.productPrice {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f44336;
+}
