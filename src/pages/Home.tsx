@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import { productList } from "./products.utils";
 import CardProduct, { Product } from "../components/CardProduct/CardProduct";
+import Banner from "../components/Banner/Banner";
 
 const HomePage = () => {
   const iPhoneList: Product[] = productList.filter(
@@ -32,14 +33,13 @@ const HomePage = () => {
     <>
       <Header />
       <div className="container mx-auto px-6">
-        <section>
-          <h1 className="text-3xl font-bold text-center text-primary my-12 px-8 leading-10">
-            Descubre la magia de la innovación con la exclusiva colección de
-            productos y accesorios Apple de iStation en Colombia. Explora
-            nuestra selección y haz de cada momento una experiencia inolvidable
-            con la calidad y el prestigio que solo iStation puede ofrecer.
-          </h1>
-        </section>
+        <Banner />
+        <h1 className="text-3xl font-bold text-center text-primary my-12 px-8 leading-10">
+          Descubre la magia de la innovación con la exclusiva colección de
+          productos y accesorios Apple de iStation en Colombia. Explora nuestra
+          selección y haz de cada momento una experiencia inolvidable con la
+          calidad y el prestigio que solo iStation puede ofrecer.
+        </h1>
         <div className="grid grid-cols-12">
           <div className="col-start-1 col-end-2">
             <ul>
