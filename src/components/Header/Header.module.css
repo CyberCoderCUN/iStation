@@ -21,13 +21,37 @@
   gap: 1rem;
 }
 
+.navbarItem {
+  color: #404040;
+}
+
 .itemText {
   font-size: 1rem;
-  color: #404040;
 }
 
 .selectedItemText {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: underline;
+}
+
+.shoppingCartContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.productsAmount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 0.5rem 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0071e3;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  color: #fff;
 }

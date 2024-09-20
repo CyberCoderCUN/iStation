@@ -1,6 +1,8 @@
 import styles from "./Header.module.css";
 import { useLocation } from "react-router-dom";
 
+import ShoppingCartIconSVG from "../../assets/icons/shopping_cart.svg";
+
 const Header = () => {
   const { pathname } = useLocation();
 
@@ -8,6 +10,8 @@ const Header = () => {
   const isIphone = pathname === "/iphone";
   const isMac = pathname === "/mac";
   const isAccessories = pathname === "/accessories";
+
+  const productsAmount = 3;
 
   return (
     <header className={styles.headerContainer}>
@@ -17,7 +21,7 @@ const Header = () => {
         </div>
         <nav className={styles.headerSection}>
           <div className={styles.navbarContainer}>
-            <div className={styles.NavbarItem}>
+            <div className={styles.navbarItem}>
               <a
                 className={isHome ? styles.selectedItemText : styles.itemText}
                 href="/"
@@ -25,18 +29,15 @@ const Header = () => {
                 Inicio
               </a>
             </div>
-            <div
-              className={isIphone ? styles.selectedItemText : styles.itemText}
-            >
+            <div className={styles.navbarItem}>
               <a
-                className={styles.itemText}
-                color={!isIphone ? "foreground" : undefined}
+                className={isIphone ? styles.selectedItemText : styles.itemText}
                 href="/iphone"
               >
                 iPhone
               </a>
             </div>
-            <div>
+            <div className={styles.navbarItem}>
               <a
                 className={isMac ? styles.selectedItemText : styles.itemText}
                 href="/mac"
@@ -44,7 +45,7 @@ const Header = () => {
                 Mac
               </a>
             </div>
-            <div>
+            <div className={styles.navbarItem}>
               <a
                 className={
                   isAccessories ? styles.selectedItemText : styles.itemText
@@ -58,11 +59,15 @@ const Header = () => {
         </nav>
         <div className={styles.headerSection}>
           <div className={styles.navbarContainer}>
-            <div className={styles.NavbarItem}>
+            <div className={styles.navbarItem}>
               <a href="#">Login</a>
             </div>
-            <div className={styles.NavbarItem}>
-              <button color="primary">Sign Up</button>
+            <div className={styles.navbarItem}>
+              <a href="#">Sign Up</a>
+            </div>
+            <div className={styles.shoppingCartContainer}>
+              <img src={ShoppingCartIconSVG} alt="shopping cart icon" />
+              <div className={styles.productsAmount}>{productsAmount}</div>
             </div>
           </div>
         </div>
