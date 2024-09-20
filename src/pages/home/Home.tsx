@@ -9,10 +9,10 @@ const HomePage = () => {
     (category) => category.name === "iPhone"
   );
   const macCategory = categoriesWithProduct.find(
-    (category) => category.name === "mac"
+    (category) => category.name === "Mac"
   );
   const accessoriesCategory = categoriesWithProduct.find(
-    (category) => category.name === "accessories"
+    (category) => category.name === "Accesorios"
   );
 
   return (
