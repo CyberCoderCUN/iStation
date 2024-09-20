@@ -149,7 +149,7 @@ export const categoriesWithProduct: CategoryWithProducts[] = [
       },
       {
         id: 14,
-        name: "Apple Pencil (2nd generation)",
+        name: "Apple Pencil 2",
         description:
           "Preciso, reactivo y sin demora, el Apple Pencil es la herramienta perfecta para dar vida a tus ideas.",
         category: "Accessory",

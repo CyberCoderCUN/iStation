@@ -5,6 +5,14 @@ const CardProduct = (props: ProductCardProps) => {
   const { product } = props;
   const { name, image, description, price, id } = product;
 
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat("es-CO", {
+      style: "currency",
+      currency: "COP",
+      minimumFractionDigits: 0,
+    }).format(price);
+  };
+
   return (
     <article
       className={styles.productCardContainer}
@@ -15,9 +23,9 @@ const CardProduct = (props: ProductCardProps) => {
         <img className={styles.image} alt={name} src={image} />
       </div>
       <div className={styles.productInfo}>
-        <b className={styles.productName}>{name}</b>
-        <b className={styles.productDescription}>{description}</b>
-        <p className={styles.productPrice}>{price}</p>
+        <p className={styles.productName}>{name}</p>
+        <p className={styles.productDescription}>{description}</p>
+        <p className={styles.productPrice}>{formatPrice(price)}</p>
       </div>
     </article>
   );

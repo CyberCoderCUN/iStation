@@ -1,8 +1,15 @@
 .productCardContainer {
   width: 200px;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #e0e0e0;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.productCardContainer:hover {
+  transform: scale(1.02);
+  border: 1px solid #0071e3;
+  cursor: pointer;
 }
 
 .imageContainer {
@@ -27,12 +34,17 @@
 }
 
 .productDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 
 .productPrice {
   font-size: 16px;
   font-weight: 600;
-  color: #f44336;
+  color: #0071e3;
 }
