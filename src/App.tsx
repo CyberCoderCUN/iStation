@@ -5,8 +5,11 @@ import MacPage from "./pages/MacPage";
 import IphonePage from "./pages/IphonePage";
 import "./App.css";
 import TopLabelPromo from "./components/TopLabelPromo/TopLabelPromo";
+import useSetupShoppingCart from "./hooks/useSetupShoppingCart";
 
 function App() {
+  useSetupShoppingCart();
+
   return (
     <>
       <BrowserRouter>

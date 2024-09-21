@@ -2,16 +2,19 @@ import styles from "./Header.module.css";
 import { useLocation } from "react-router-dom";
 
 import ShoppingCartIconSVG from "../../assets/icons/shopping_cart.svg";
+import { useShoppingCartStore } from "../../stores/shoppingCart/shoppingCart.store";
 
 const Header = () => {
   const { pathname } = useLocation();
+
+  const cart = useShoppingCartStore((state) => state.shoppingCart);
 
   const isHome = pathname === "/";
   const isIphone = pathname === "/iphone";
   const isMac = pathname === "/mac";
   const isAccessories = pathname === "/accessories";
 
-  const productsAmount = 3;
+  const productsAmount = cart.products.length;
 
   return (
     <header className={styles.headerContainer}>
