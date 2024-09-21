@@ -125,7 +125,7 @@ export const categoriesWithProduct: CategoryWithProducts[] = [
         category: "Accessory",
         price: 1029000,
         image:
-          "https://co.tiendasishop.com/cdn/shop/files/IMG-10869228_550x.jpg?v=1723513630",
+          "https://mac-center.com/cdn/shop/files/AirPods_Pro_2Gen_LOB_Page_1.webp?v=1708609724&width=550",
       },
       {
         id: 12,
